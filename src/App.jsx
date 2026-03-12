@@ -1,0 +1,23 @@
+import React from "react";
+import { createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router/dom";
+import RootLayout from "./components/ui/RootLayout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+
+const App = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      Component: RootLayout,
+      children: [
+        { index: true, Component: Home },
+        { path: "about", Component: About },
+      ],
+    },
+  ]);
+
+  return <RouterProvider router={router} />;
+};
+
+export default App;
