@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import RootLayout from "./components/ui/RootLayout";
+import RootLayout from "./components/layout/RootLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
