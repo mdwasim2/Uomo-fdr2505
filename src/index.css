@@ -6,6 +6,7 @@
   --color-primary-white: #ffffff;
   --color-secondary: #767676;
   --color-thirdcolor: #b9a16b;
+  --color-redcolor: #D6001C;
 }
 .u-list {
   @apply ml-14 flex gap-11;
