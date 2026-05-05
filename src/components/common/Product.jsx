@@ -1,13 +1,12 @@
-import React from "react";
-import Image from "./Image";
 import ProductImage from "../../assets/images/productimage.png";
+import Image from "./Image";
 
 const Product = ({ item }) => {
   return (
-    <div className="relative max-w-82.5">
+    <div className="relative w-full ">
       <div className="group">
         <Image
-          className=""
+          className="w-full"
           src={item.thumbnail || ProductImage}
           alt="product"
         />
