@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState , useRef} from "react";
 import { IoClose, IoFilterSharp } from "react-icons/io5";
 
 const SortAndView = ({ setView }) => {
@@ -7,6 +7,27 @@ const SortAndView = ({ setView }) => {
   const handleView = (view) => {
     setView(view)
   }
+  // let filterRef = useRef()
+
+  // useEffect(()=>{
+
+  //   window.addEventListener("mousedown", function(e){
+
+      
+  //       if(e.target.contains(filterRef.current)){
+  //         setFilterModal(false)
+  //       }else{
+  //         setFilterModal(true)
+  //       }
+  //   })  
+
+  //   return ()=>{
+  //     window.addEventListener("mousedown", function(){
+  //                 setFilterModal(false)
+  //     })
+  //   }
+  // },[filterModal])
+
   return (
     <div className=" flex gap-15.5 ">
       <select className="font-jost text-primary-black border-b-2 text-base leading-6 font-medium uppercase">
@@ -14,7 +35,7 @@ const SortAndView = ({ setView }) => {
         <option className=" ">adsfasdf</option>
         <option className=" ">adsfasdf</option>
       </select>
-      <div className="flex items-center">
+      {/* <div className="flex items-center">
         <h2 className="font-jost text-primary-black  text-base leading-6 font-medium uppercase">VIEW</h2>
         {viewproduct.map((item) => (
           <button onClick={() => handleView(item)} className="font-jost text-primary-black ml-4.5 text-base leading-6 font-medium uppercase">{item}</button>
@@ -22,7 +43,8 @@ const SortAndView = ({ setView }) => {
         ))}
 
       </div>
-      <div onClick={() => setFilterModal(!filterModal)} className="flex gap-2.5 items-center cursor-pointer">
+        <div ref={filterRef} >
+      <div  className="flex gap-2.5 items-center cursor-pointer">
         <IoFilterSharp />
 
         <h2 className="font-jost text-primary-black  text-base leading-6 font-medium uppercase">FILTER</h2>
@@ -39,6 +61,7 @@ const SortAndView = ({ setView }) => {
         </div>
 
       </div>
+        </div> */}
 
 
     </div>
