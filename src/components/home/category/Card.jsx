@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 import Image from "../../common/Image";
 
@@ -6,14 +5,14 @@ const Card = ({ item }) => {
   return (
     <div
       key={item.id}
-      className={`relative h-full w-full ${item.id == 1 && "col-span-2 row-span-2"} ${item.id == 2 && "col-span-2 row-span-1"}`}
+      className={` relative   md:h-full w-full ${item.id == 1 && "md:col-span-2 md:row-span-2"} ${item.id == 2 && "md:col-span-2 md:row-span-1"}`}
     >
-      <Image src={item.image} className="h-full w-full" alt={item.name} />
-      <div className="absolute bottom-10 left-10">
-        <h4 className="font-jost text-primary-black text-sm leading-6 font-normal">
+      <Image src={item.image} className="h-full w-full  object-fill   " alt={item.name} />
+      <div className="w-2/4 md:w-auto absolute bottom-10 left-10">
+        <h4 className="font-jost text-primary-black text-[10px] md:text-sm leading-6 font-normal">
           HOT LIST
         </h4>
-        <h2 className="font-jost text-[24px] font-medium">
+        <h2 className="font-jost text-base md:text-[24px] font-medium">
           <span className="font-bold">{item.name} </span>COLLECTION
         </h2>
         <Link

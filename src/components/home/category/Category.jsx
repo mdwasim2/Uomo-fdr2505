@@ -6,7 +6,7 @@ const Category = () => {
   return (
     <section className="mt-25.25">
       <Container>
-        <div className="grid grid-cols-4 grid-rows-2 gap-7.5">
+        <div className="grid md:grid-cols-4 md:grid-rows-2 gap-5 md:gap-7.5">
           {CategoryData?.map((item) => (
             <Card item={item} />
           ))}

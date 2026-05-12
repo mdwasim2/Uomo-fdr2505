@@ -1,8 +1,7 @@
-import React from "react";
-import Image from "../common/Image";
-import { BannerData } from "../../api/bannerdata";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { BannerData } from "../../api/bannerdata";
+import Image from "../common/Image";
 const Banner = () => {
   const settings = {
     dots: true,
@@ -14,7 +13,7 @@ const Banner = () => {
     appendDots: (dots) => (
       <div>
         <ul
-          className="absolute bottom-14.5 left-48.75 flex gap-5"
+          className="absolute bottom-5 left-5 md:bottom-14.5 md:left-48.75 flex gap-5"
           style={{ margin: "0px" }}
         >
           {" "}
@@ -27,14 +26,16 @@ const Banner = () => {
     ),
   };
   return (
-    <section className="mx-15">
+    <section className="md:mx-15">
       <Slider {...settings}>
         {BannerData?.map((item) => (
-          <Image
-            className="w-full text-center"
-            key={item.id}
-            src={item.banner}
-          />
+          <div className="w-full">
+            <Image
+              className="w-full text-center"
+              key={item.id}
+              src={item.banner}
+            />
+          </div>
         ))}
       </Slider>
     </section>

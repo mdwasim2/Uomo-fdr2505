@@ -2,11 +2,14 @@ import { Link } from "react-router";
 import { navitems } from "../../api/navbardata";
 import Image from "../common/Image";
 import Container from "../ui/Container";
+import MobileNav from "./MobileNav";
+
 const Header = () => {
   const cartItems = 3;
+  
   return (
     <header className="mt-7.25 mb-4.75">
-      <nav>
+      <nav className="hidden md:block ">
         <Container>
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -126,6 +129,8 @@ const Header = () => {
           </div>
         </Container>
       </nav>
+                <MobileNav/>
+    
     </header>
   );
 };
