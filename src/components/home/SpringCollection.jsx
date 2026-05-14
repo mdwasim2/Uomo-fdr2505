@@ -6,14 +6,14 @@ import SCImaage from "../../assets/images/springcollection.png";
 import Countdown from "react-countdown";
 const SpringCollection = () => {
   return (
-    <section className="mx-15 mt-25 bg-[#EBEBEB] pt-7 pb-7.25">
+    <section className="mx-3.75 mt-12.5 bg-[#EBEBEB] pt-7 pb-7.25 md:mx-15 md:mt-25">
       <Container>
         <div className="flex items-end justify-between">
           <div>
             <h4 className="font-jost after:content-[] relative ml-16.5 text-sm leading-6 font-medium text-[#C32929] after:absolute after:top-2 after:-left-15 after:h-0.5 after:w-10 after:bg-[#c32929]">
               DEAL OF THE WEEK
             </h4>
-            <h2 className="font-jost text-primary-black mt-2.25 text-[70px] font-normal">
+            <h2 className="font-jost text-primary-black mt-2.25 text-[30px] font-normal md:text-[70px]">
               <span className="font-bold">Spring</span> Collection
             </h2>
             <Link
@@ -82,7 +82,11 @@ const SpringCollection = () => {
               }}
             />
           </div>
-          <Image src={SCImaage} alt="springcollection" />
+          <Image
+            className="hidden md:block"
+            src={SCImaage}
+            alt="springcollection"
+          />
         </div>
       </Container>
     </section>

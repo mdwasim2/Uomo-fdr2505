@@ -5,10 +5,10 @@ import { navitems } from "../../api/navbardata";
 import Image from "../common/Image";
 const MobileNav = () => {
   const cartItems = 3;
-  const [mobileMenu , setMobileMenu]=useState(false)
+  const [mobileMenu, setMobileMenu] = useState(false);
   return (
     <div className="mobile_nav mx-3.75 flex items-center justify-between md:hidden">
-      <button onClick={()=>setMobileMenu(true)}>
+      <button onClick={() => setMobileMenu(true)}>
         <svg
           width="25"
           height="18"
@@ -43,21 +43,24 @@ const MobileNav = () => {
           {cartItems}
         </span>
       </div>
-    {mobileMenu && 
-      <div className="absolute top-0 left-0 h-screen w-full  bg-primary-white">
-        <button className=" absolute right-3 top-3" onClick={()=>setMobileMenu(false)}>
-        <IoMdClose size={30} />
+
+      <div
+        className={`bg-primary-white absolute top-0 ${mobileMenu ? "left-0" : "-left-full"} z-50 h-screen w-full duration-300`}
+      >
+        <button
+          className="absolute top-3 right-3"
+          onClick={() => setMobileMenu(false)}
+        >
+          <IoMdClose size={30} />
         </button>
-         <ul className="p-10 flex flex-col gap-5" >
-                        {navitems?.map((item) => (
-                          <li className="list-item" key={item.id}>
-                            <Link to={item.url}>{item.name}</Link>
-                          </li>
-                        ))}
-                      </ul>
+        <ul className="flex flex-col gap-5 p-10">
+          {navitems?.map((item) => (
+            <li className="list-item" key={item.id}>
+              <Link to={item.url}>{item.name}</Link>
+            </li>
+          ))}
+        </ul>
       </div>
-    
-    }
     </div>
   );
 };

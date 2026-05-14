@@ -51,12 +51,12 @@ const TrendyProducts = () => {
     setProductLimit(limit);
   };
   return (
-    <section className="mt-25.25">
+    <section className="mt-[37px] md:mt-25.25">
       <Container>
-        <h2 className="font-jost text-primary-black text-center text-[35px] font-normal">
+        <h2 className="font-jost text-primary-black text-center text-[26px] font-normal md:text-[35px]">
           OUR TRENDY <span className="font-bold">PRODUCTS</span>
         </h2>
-        <ul className="mt-7.5 flex justify-center gap-13.5">
+        <ul className="mt-7.5 flex flex-wrap justify-center gap-x-11.25 md:flex-nowrap md:gap-13.5">
           {Productcategory?.map((item) => (
             <Listitem
               onClick={() => handleActive(item.name)}
@@ -66,7 +66,7 @@ const TrendyProducts = () => {
             </Listitem>
           ))}
         </ul>
-        <div className="mt-10 grid grid-cols-4 gap-x-7.5 gap-y-15">
+        <div className="mt-10 grid grid-cols-2 gap-x-7.5 gap-y-15 md:grid-cols-4">
           {category == "all"
             ? productLimit.map((item) => <Product item={item} key={item.id} />)
             : filterproduct.map((item) => (

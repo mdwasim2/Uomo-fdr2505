@@ -2,7 +2,7 @@ import { IoHomeOutline } from "react-icons/io5";
 
 const MobileNavigation = () => {
   return (
-    <div className="bg-primary-white fixed bottom-0 left-0 w-full py-2.5 shadow-2xl shadow-gray-500 md:hidden">
+    <div className="bg-primary-white fixed bottom-0 left-0 z-50 w-full py-2.5 shadow-2xl shadow-gray-500 md:hidden">
       <ul className="flex justify-around">
         <li className="flex flex-col items-center">
           <button>

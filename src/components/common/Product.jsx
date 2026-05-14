@@ -3,26 +3,26 @@ import Image from "./Image";
 
 const Product = ({ item }) => {
   return (
-    <div className="relative w-full ">
+    <div className="relative w-full">
       <div className="group">
         <Image
           className="w-full"
           src={item.thumbnail || ProductImage}
           alt="product"
         />
-        <div className="invisible absolute bottom-20 left-2/4 w-77.5 translate-x-[-50%] bg-white pt-4 pb-2.5 text-center shadow shadow-gray-100 duration-200 group-hover:visible group-hover:bottom-30">
+        <div className="visible absolute bottom-20 left-2/4 w-full translate-x-[-50%] bg-white pt-4 pb-2.5 text-center shadow shadow-gray-100 duration-200 group-hover:visible group-hover:bottom-30 md:invisible md:w-77.5">
           <button className="font-jost text-sm leading-6 font-medium">
             ADD TO CART
           </button>
         </div>
       </div>
-      <div className="flex justify-between">
+      <div className="flex items-start justify-between">
         <div>
           <h3 className="font-jost text-secondary mt-3.5 text-sm leading-6 font-normal">
             {item.category}
           </h3>
           <h2 className="font-jost text-primary-black mt-2.25 text-base font-normal">
-            {item.title}
+            {item.title.slice(0, 15)} ...
           </h2>
           <div className="flex gap-2.5">
             {item.discountprice && (
